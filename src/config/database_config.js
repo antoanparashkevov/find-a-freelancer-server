@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
+
 const configDatabase = async (app) => {
     try {
-      const connection = mongoose.connect(process.env.CONNECTION_URL, 
+        //process.env.CONNECTION_URL
+      const connection = await mongoose.connect('mongodb://localhost:27017/freelancers', 
           { useNewUrlParser: true, useUnifiedTopology: true })
         console.log('MongoDB connected ', connection.connection.host)
     } catch (error) {

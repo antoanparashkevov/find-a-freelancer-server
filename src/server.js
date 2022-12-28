@@ -12,8 +12,8 @@ const profileController = require('./controllers/profileController.js')
 const trimBody = require('./middlewares/trimBody.js')
 const session = require('./middlewares/session.js')
 
-const configExpress = require('./config/express-configuration')
-const configDatabase = require('./config/database_config')
+const configExpress = require('./config/express-configuration.js')
+const configDatabase = require('./config/database_config.js')
 
 const app = express();
 dotenv.config();
