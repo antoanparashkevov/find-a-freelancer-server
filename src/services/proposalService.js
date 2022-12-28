@@ -1,4 +1,4 @@
-const Proposal = require('../models/Proposal')
+const Proposal = require('../models/Proposal.js')
 
 // async function getAll () {
 //     return Proposal.find({})

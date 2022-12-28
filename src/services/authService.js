@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const User = require('../models/User')
+const User = require('../models/User.js')
 const SECRET_KEY = 'MYSECRETKEY'
 
 let tokenBlackList = new Set();

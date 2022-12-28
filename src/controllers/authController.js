@@ -1,7 +1,7 @@
-const {register, login, logout} = require("../services/authService");
+const {register, login, logout} = require("../services/authService.js");
 const {body,validationResult} = require('express-validator')
 const router = require('express').Router()
-const parseError = require('../util/parser')
+const parseError = require('../util/parser.js')
 
 router.post('/register' ,
     body('email').isEmail().withMessage('Invalid email'),

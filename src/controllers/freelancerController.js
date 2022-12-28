@@ -1,6 +1,6 @@
-const {getAll, create, getById, getFreelancerRegistration, update, deleteById } = require("../services/freelancerService");
-const parseError = require('../util/parser')
-const {hasUser} = require("../middlewares/guards");
+const {getAll, create, getById, getFreelancerRegistration, update, deleteById } = require("../services/freelancerService.js");
+const parseError = require('../util/parser.js')
+const {hasUser} = require("../middlewares/guards.js");
 const router = require('express').Router();
 
 router.get('/freelancers',async(req, res)=>{

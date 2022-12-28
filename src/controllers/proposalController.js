@@ -1,6 +1,6 @@
-const { create, getById } = require("../services/proposalService");
-const { hasUser } = require("../middlewares/guards");
-const parseError = require("../util/parser");
+const { create, getById } = require("../services/proposalService.js");
+const { hasUser } = require("../middlewares/guards.js");
+const parseError = require("../util/parser.js");
 const router = require('express').Router();
 
 router.post('/proposals', async (req,res)=>{

@@ -1,4 +1,4 @@
-const Freelancer = require('../models/Freelancer')
+const Freelancer = require('../models/Freelancer.js')
 
 async function getAll () {
     return Freelancer.find({})

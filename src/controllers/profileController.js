@@ -1,6 +1,6 @@
-const { hasUser } = require("../middlewares/guards");
-const { create } = require("../services/freelancerService");
-const parseError = require("../util/parser");
+const { hasUser } = require("../middlewares/guards.js");
+const { create } = require("../services/freelancerService.js");
+const parseError = require("../util/parser.js");
 const router = require('express').Router()
 
 router.get('/userInfo', hasUser(), async (req,res)=> {
