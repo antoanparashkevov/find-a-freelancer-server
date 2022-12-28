@@ -1,5 +1,6 @@
 const express = require('express')
 const dotenv = require('dotenv')
+const PORT = process.env.PORT | 3000
 
 //Controllers...
 const authController = require('./controllers/authController.js')
@@ -34,5 +35,5 @@ app.use('/freelancersData', freelancerController)
 app.use('/proposalsData', proposalController)
 app.use('/profileData', profileController)
 
-
+app.listen(PORT, ()=>console.log('Server listening on port', PORT))
 
