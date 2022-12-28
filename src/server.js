@@ -19,7 +19,6 @@ const app = express();
 dotenv.config();
 
 configExpress(app);
-configDatabase(app);
 
 app.use(trimBody())
 app.use(session())
@@ -30,10 +29,13 @@ app.get('/', (req,res)=>{
     })
 });
 
+//Routes go here
 app.use('/users', authController)
 app.use('/freelancersData', freelancerController)
 app.use('/proposalsData', proposalController)
 app.use('/profileData', profileController)
 
-app.listen(PORT, ()=>console.log('Server listening on port', PORT))
-
+//connect to database before listening
+configDatabase(app).then(()=>{
+    app.listen(PORT, ()=>console.log('Server listening on port', PORT))
+});
