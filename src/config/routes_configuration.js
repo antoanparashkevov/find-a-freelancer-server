@@ -11,6 +11,12 @@ module.exports = (app)=> {
         })
     });
     
+    app.get('/admin', (req,res)=>{
+        res.json({
+            message: 'Admin page requires authentication'
+        })
+    })
+    
     app.use('/users', authController)
     app.use('/freelancersData', freelancerController)
     app.use('/proposalsData', proposalController)
