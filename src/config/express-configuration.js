@@ -1,5 +1,4 @@
 const express = require('express')
-// const cors = require('cors') //not used yet
 const corsMiddleware = require('../middlewares/cors.js')
 const trimBody = require("../middlewares/trimBody");
 const session = require("../middlewares/session");
