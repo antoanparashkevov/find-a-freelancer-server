@@ -2,7 +2,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 
-const PORT = process.env.PORT | 9000
+const PORT = process.env.PORT | 5000
 
 //Config
 const configExpress = require('./config/express-configuration.js')
